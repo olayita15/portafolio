@@ -4,8 +4,9 @@
     headline="Desarrollador de software"
     description="Desarrollador Full Stack con experiencia en Python, Django REST Framework, JavaScript y Vue/Nuxt. Enfocado en construir aplicaciones web, APIs REST y dashboards, integrando soluciones robustas de frontend y backend."
     :ui="{
-      container: 'py-8 sm:py-10 lg:py-0 gap-8',
-      footer: 'mt-8'
+      container: 'py-8 sm:py-10 lg:pb-0 lg:pt-6 gap-8',
+      description: 'mt-8',
+      footer: 'mt-16'
     }"
   >
     <template #footer>
