@@ -7,7 +7,9 @@ type PortfolioSeoOptions = {
 export function usePortfolioSeo({ title, description, path }: PortfolioSeoOptions) {
   const config = useRuntimeConfig()
   const siteUrl = config.public.siteUrl as string
-  const canonicalUrl = siteUrl ? new URL(path, siteUrl).toString() : undefined
+  const canonicalUrl = siteUrl
+    ? new URL(path.replace(/^\//, ''), `${siteUrl.replace(/\/$/, '')}/`).toString()
+    : undefined
 
   useSeoMeta({
     title,

@@ -67,10 +67,10 @@ function submitContactForm() {
         <UCard :ui="{ header: 'p-4 sm:px-5 sm:py-3', body: 'p-4 sm:p-5' }">
           <template #header><h2 class="font-semibold text-highlighted">Envíame un mensaje</h2></template>
           <form class="space-y-2.5" @submit.prevent="submitContactForm">
-            <UFormField label="Nombre" name="name" required><UInput v-model="contact.name" name="name" autocomplete="name" placeholder="Tu nombre" size="lg" class="w-full" /></UFormField>
-            <UFormField label="Correo electrónico" name="email" required><UInput v-model="contact.email" name="email" type="email" autocomplete="email" placeholder="tu@correo.com" size="lg" class="w-full" /></UFormField>
+            <UFormField label="Nombre" name="name" required><!-- NOSONAR: UInput renderiza un input nativo con autocomplete válido. --><UInput v-model="contact.name" name="name" autocomplete="name" placeholder="Tu nombre" size="lg" class="w-full" /></UFormField>
+            <UFormField label="Correo electrónico" name="email" required><!-- NOSONAR: UInput renderiza un input nativo con autocomplete válido. --><UInput v-model="contact.email" name="email" type="email" autocomplete="email" placeholder="tu@correo.com" size="lg" class="w-full" /></UFormField>
             <UFormField label="Motivo de contacto" name="template"><USelect v-model="selectedTemplate" :items="emailTemplates" placeholder="Selecciona una opción" class="w-full" /></UFormField>
-            <UFormField label="Mensaje" name="message" required><UTextarea v-model="contact.message" name="message" :rows="3" placeholder="Cuéntame brevemente en qué puedo ayudarte." class="w-full" /></UFormField>
+            <UFormField label="Mensaje" name="message" required><!-- NOSONAR: UTextarea renderiza un textarea nativo con autocomplete válido. --><UTextarea v-model="contact.message" name="message" autocomplete="off" :rows="3" placeholder="Cuéntame brevemente en qué puedo ayudarte." class="w-full" /></UFormField>
             <UAlert v-if="error" color="error" variant="subtle" :description="error" icon="i-lucide-circle-alert" />
             <UButton type="submit" size="lg" icon="i-lucide-send" label="Preparar correo" />
           </form>
