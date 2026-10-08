@@ -26,6 +26,8 @@ usePortfolioSeo({
 
         <UCard><Education /></UCard>
 
+        <UCard><Certificates /></UCard>
+
         <UCard><Skills /></UCard>
 
         <UCard><Achievements /></UCard>

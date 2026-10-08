@@ -4,7 +4,6 @@ const education = [
   { title: 'Programación Full-stack', institution: 'Simplon | Educamás', period: 'Octubre 2022 — Marzo 2023' },
   { title: 'Ingeniería Electrónica', institution: 'Universidad Distrital Francisco José de Caldas', period: 'Mayo 2016 — Mayo 2020', note: 'Estudios no finalizados · Base en programación y pensamiento lógico.' }
 ]
-const courses = ['Vue.js 3: Composition, Pinia y MEVN', 'Django REST Framework de cero a experto', 'Python y ChatGPT: chatbots y soluciones IA', 'Principios SOLID y Clean Code']
 </script>
 
 <template>
@@ -15,8 +14,5 @@ const courses = ['Vue.js 3: Composition, Pinia y MEVN', 'Django REST Framework d
         <div class="flex gap-3"><UIcon name="i-lucide-book-open" class="mt-0.5 size-5 shrink-0 text-primary" /><div class="min-w-0"><div class="flex flex-wrap items-start justify-between gap-2"><h3 class="font-semibold text-highlighted">{{ item.title }}</h3><UBadge v-if="item.current" color="primary" variant="subtle" label="En curso" /></div><p class="mt-1 text-sm text-muted">{{ item.institution }}</p><p class="mt-2 text-sm text-muted">{{ item.period }}</p><p v-if="item.note" class="mt-1 text-sm text-muted">{{ item.note }}</p></div></div>
       </article>
     </div>
-    <USeparator class="my-6" />
-    <h3 class="font-semibold text-highlighted">Cursos destacados</h3>
-    <div v-scroll-reveal="80" class="scroll-reveal mt-3 flex flex-wrap gap-2"><UBadge v-for="course in courses" :key="course" color="neutral" variant="subtle" :label="course" /></div>
   </section>
 </template>

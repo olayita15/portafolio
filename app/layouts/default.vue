@@ -35,6 +35,16 @@ const items = computed<NavigationMenuItem[]>(() => [
 
     <template #right>
       <UColorModeButton />
+      <UTooltip text="Ver repositorio del portafolio">
+        <UButton
+          to="https://github.com/olayita15/portafolio"
+          target="_blank"
+          color="neutral"
+          variant="ghost"
+          icon="i-simple-icons-github"
+          aria-label="Repositorio del portafolio en GitHub"
+        />
+      </UTooltip>
     </template>
 
     <template #body>

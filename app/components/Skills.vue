@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const skillGroups = [
-  { label: 'Backend y arquitectura', icon: 'i-lucide-server', skills: ['Python', 'Django', 'Django REST Framework', 'Django Channels', 'Celery', 'Redis', 'SQL'] },
-  { label: 'Frontend', icon: 'i-lucide-monitor-smartphone', skills: ['Vue', 'Vue 3', 'JavaScript', 'Vuex', 'Vue Router', 'Axios', 'HTML5', 'CSS3', 'WebSockets'] },
+  { label: 'Backend y arquitectura', icon: 'i-lucide-server', skills: ['Python', 'Django', 'Django REST Framework', 'Django Channels', 'Celery', 'Redis', 'SQL', 'Node.js', 'Express'] },
+  { label: 'Frontend', icon: 'i-lucide-monitor-smartphone', skills: ['Vue', 'Vue 3', 'Angular', 'JavaScript', 'Vuex', 'Vue Router', 'Axios', 'HTML5', 'CSS3', 'SCSS', 'Bootstrap', 'WebSockets'] },
   { label: 'Infraestructura', icon: 'i-lucide-box', skills: ['Docker', 'Docker Compose', 'Git', 'Linux', 'Bash', 'SCRUM'] }
 ]
 </script>
