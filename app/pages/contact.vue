@@ -61,7 +61,7 @@ function submitContactForm() {
 </script>
 
 <template>
-  <UContainer class="py-4 sm:py-6 lg:flex lg:h-[calc(100dvh-4rem)] lg:items-start">
+  <UContainer class="py-6 sm:py-8 lg:flex lg:min-h-[calc(100dvh-4rem)] lg:items-center">
     <div class="mx-auto max-w-6xl">
       <div class="grid gap-6 lg:grid-cols-2">
         <UCard :ui="{ header: 'p-4 sm:px-5 sm:py-3', body: 'p-4 sm:p-5' }">
