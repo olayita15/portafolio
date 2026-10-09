@@ -34,13 +34,9 @@ function openCertificate(certificate: Certificate) {
         <UIcon name="i-lucide-badge-check" class="size-5" />
       </div>
       <div>
-        <p class="text-sm font-medium text-primary">Trayectoria verificable</p>
+        <p class="text-sm font-medium text-primary">Trayectoria</p>
         <h2 id="certificates-title" class="text-xl font-semibold text-highlighted">Certificados de formación</h2>
       </div>
-    </div>
-
-    <div class="mt-6">
-      <h3 class="text-base font-semibold text-highlighted">Certificados de formación</h3>
     </div>
 
     <UPageGrid class="mt-4 gap-4 sm:grid-cols-2 xl:grid-cols-3">
