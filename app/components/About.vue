@@ -5,20 +5,20 @@
         <UIcon name="i-lucide-user-round" class="size-5" />
       </div>
       <div>
-        <p class="text-sm font-medium text-primary">Enfoque</p>
-        <h2 id="about-title" class="text-xl font-semibold text-highlighted">Profesional</h2>
+        <p class="text-sm font-medium text-primary">Trayectoria</p>
+        <h2 id="about-title" class="text-xl font-semibold text-highlighted">Perfil profesional</h2>
       </div>
     </div>
 
     <p v-scroll-reveal="0" class="scroll-reveal mt-5 leading-7 text-muted">
-      Abordo el desarrollo desde una perspectiva práctica y orientada a resultados, buscando soluciones claras, mantenibles y alineadas con las necesidades del proyecto. Combino análisis del problema, criterio técnico y comunicación efectiva para convertir requerimientos en soluciones funcionales.
+      Cuento con más de cuatro años de experiencia en desarrollo de software y he participado en proyectos variados para entidades estatales desde el grupo empresarial Inyuxi. Esta trayectoria me ha permitido fortalecer la comunicación con clientes, la gestión de solicitudes de soporte y la coordinación efectiva con equipos internos y externos para llevar los requerimientos a soluciones concretas.
     </p>
 
     <div v-scroll-reveal="80" class="scroll-reveal mt-5 flex flex-wrap gap-2">
-      <UBadge color="primary" variant="subtle" label="Pensamiento analítico" />
-      <UBadge color="primary" variant="subtle" label="Resolución de problemas" />
-      <UBadge color="primary" variant="subtle" label="Trabajo en equipo" />
-      <UBadge color="primary" variant="subtle" label="Comunicación efectiva" />
+      <UBadge color="primary" variant="subtle" label="Relación con clientes" />
+      <UBadge color="primary" variant="subtle" label="Soporte y seguimiento" />
+      <UBadge color="primary" variant="subtle" label="Coordinación de equipos" />
+      <UBadge color="primary" variant="subtle" label="Gestión de solicitudes" />
     </div>
   </section>
 </template>

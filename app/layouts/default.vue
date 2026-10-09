@@ -2,6 +2,8 @@
 import type { NavigationMenuItem } from '@nuxt/ui'
 
 const route = useRoute()
+const showProjectsNudge = ref(false)
+let projectsNudgeTimer: ReturnType<typeof setTimeout> | undefined
 
 const items = computed<NavigationMenuItem[]>(() => [
   {
@@ -23,15 +25,42 @@ const items = computed<NavigationMenuItem[]>(() => [
     active: route.path.startsWith('/contact')
   }
 ])
+
+onMounted(() => {
+  projectsNudgeTimer = window.setTimeout(() => {
+    if (route.path === '/') showProjectsNudge.value = true
+  }, 30_000)
+})
+
+onBeforeUnmount(() => {
+  if (projectsNudgeTimer) clearTimeout(projectsNudgeTimer)
+})
 </script>
 
 <template>
-  <UHeader>
+  <UHeader :ui="{ root: 'border-b border-default/80 bg-default/85 backdrop-blur-lg' }">
     <template #title>
-      Christian Olaya
+      <NuxtLink to="/" class="flex items-center gap-2.5 font-semibold text-highlighted">
+        <span class="flex size-8 items-center justify-center rounded-lg bg-primary text-sm font-bold text-inverted">CO</span>
+        <span class="hidden sm:inline">Christian Olaya</span>
+      </NuxtLink>
     </template>
 
-    <UNavigationMenu :items="items" />
+    <nav aria-label="Navegación principal" class="hidden items-center rounded-xl border border-default bg-elevated/70 p-1 lg:flex">
+      <UButton
+        v-for="item in items"
+        :key="item.label"
+        :to="item.to"
+        :icon="item.icon"
+        :color="item.active ? 'primary' : 'neutral'"
+        :variant="item.active ? 'soft' : 'ghost'"
+        size="sm"
+        :aria-current="item.active ? 'page' : undefined"
+        :class="item.label === 'Proyectos' && showProjectsNudge ? 'nav-projects-nudge' : ''"
+      >
+        {{ item.label }}
+      </UButton>
+    </nav>
 
     <template #right>
       <UColorModeButton />

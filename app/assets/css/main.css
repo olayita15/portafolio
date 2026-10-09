@@ -41,6 +41,30 @@
   transform: translateY(0);
 }
 
+.nav-projects-nudge {
+  animation: projects-nudge 1.8s ease-in-out 3;
+}
+
+@keyframes projects-nudge {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  35% {
+    transform: translateY(-2px) scale(1.04);
+  }
+
+  65% {
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-projects-nudge {
+    animation: none;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .page-enter-active,
   .page-leave-active {
