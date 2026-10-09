@@ -1,4 +1,6 @@
 <script setup lang="ts">
+const baseURL = useRuntimeConfig().app.baseURL
+
 useHead({
   htmlAttrs: {
     lang: 'es'
@@ -8,7 +10,7 @@ useHead({
     { name: 'theme-color', content: '#10b981' }
   ],
   link: [
-    { rel: 'icon', href: '/favicon.ico' }
+    { rel: 'icon', href: `${baseURL}favicon.ico` }
   ]
 })
 </script>
