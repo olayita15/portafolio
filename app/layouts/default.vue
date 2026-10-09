@@ -29,7 +29,7 @@ const items = computed<NavigationMenuItem[]>(() => [
 onMounted(() => {
   projectsNudgeTimer = window.setTimeout(() => {
     if (route.path === '/') showProjectsNudge.value = true
-  }, 15_000)
+  }, 10_000)
 })
 
 onBeforeUnmount(() => {
