@@ -42,20 +42,25 @@
 }
 
 .nav-projects-nudge {
-  animation: projects-nudge 1.8s ease-in-out 3;
+  animation: projects-buzz 900ms ease-in-out 4;
 }
 
-@keyframes projects-nudge {
+@keyframes projects-buzz {
   0%, 100% {
     transform: translateY(0);
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--ui-primary) 0%, transparent);
   }
 
-  35% {
-    transform: translateY(-2px) scale(1.04);
+  15%, 45% {
+    transform: translateX(-2px);
   }
 
-  65% {
-    transform: translateY(0) scale(1);
+  30%, 60% {
+    transform: translateX(2px);
+  }
+
+  50% {
+    box-shadow: 0 0 0 5px color-mix(in srgb, var(--ui-primary) 20%, transparent), 0 0 16px 2px color-mix(in srgb, var(--ui-primary) 35%, transparent);
   }
 }
 
