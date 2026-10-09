@@ -40,8 +40,13 @@ const achievements = [
 
 type Achievement = typeof achievements[number]
 
+const baseURL = useRuntimeConfig().app.baseURL
 const selectedAchievement = ref<Achievement | null>(null)
 const isViewerOpen = ref(false)
+
+function assetUrl(path: string) {
+  return `${baseURL.replace(/\/$/, '')}${path}`
+}
 
 function openEvidence(achievement: Achievement) {
   if (!achievement.file) return
@@ -78,7 +83,7 @@ function openEvidence(achievement: Achievement) {
               <p class="mt-2 text-sm leading-6 text-muted">{{ achievement.description }}</p>
             </div>
             <div v-if="achievement.file" class="shrink-0 overflow-hidden rounded-md border border-default bg-white">
-              <img :src="achievement.preview" :alt="`Vista previa del comprobante de ${achievement.title}`" class="h-16 w-24 object-contain p-1">
+              <img :src="assetUrl(achievement.preview)" :alt="`Vista previa del comprobante de ${achievement.title}`" class="h-16 w-24 object-contain p-1">
             </div>
           </div>
         </div>
@@ -94,13 +99,13 @@ function openEvidence(achievement: Achievement) {
       <template #body>
         <iframe
           v-if="selectedAchievement?.format === 'pdf'"
-          :src="selectedAchievement.file"
+          :src="assetUrl(selectedAchievement.file)"
           :title="selectedAchievement.title"
           class="h-[70vh] w-full rounded-md border border-default"
         />
         <img
           v-else-if="selectedAchievement"
-          :src="selectedAchievement.file"
+          :src="assetUrl(selectedAchievement.file)"
           :alt="selectedAchievement.title"
           class="max-h-[70vh] w-full rounded-md border border-default object-contain"
         >
@@ -109,7 +114,7 @@ function openEvidence(achievement: Achievement) {
       <template #footer>
         <UButton
           v-if="selectedAchievement"
-          :to="selectedAchievement.file"
+          :to="assetUrl(selectedAchievement.file)"
           target="_blank"
           color="neutral"
           variant="outline"

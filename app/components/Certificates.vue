@@ -13,8 +13,13 @@ const trainingCertificates = computed(() => certificates.filter(certificate => c
 
 type Certificate = typeof certificates[number]
 
+const baseURL = useRuntimeConfig().app.baseURL
 const selectedCertificate = ref<Certificate | null>(null)
 const isViewerOpen = ref(false)
+
+function assetUrl(path: string) {
+  return `${baseURL.replace(/\/$/, '')}${path}`
+}
 
 function openCertificate(certificate: Certificate) {
   selectedCertificate.value = certificate
@@ -50,7 +55,7 @@ function openCertificate(certificate: Certificate) {
         <template #header>
           <div class="flex h-28 items-center justify-center overflow-hidden rounded-md border border-default bg-elevated">
             <img
-              :src="certificate.preview"
+              :src="assetUrl(certificate.preview)"
               :alt="`Vista previa de ${certificate.title}`"
               class="h-full w-full object-contain bg-white p-1"
             >
@@ -79,13 +84,13 @@ function openCertificate(certificate: Certificate) {
       <template #body>
         <iframe
           v-if="selectedCertificate.format === 'pdf'"
-          :src="selectedCertificate.file"
+          :src="assetUrl(selectedCertificate.file)"
           :title="selectedCertificate.title"
           class="h-[70vh] w-full rounded-md border border-default"
         />
         <img
           v-else
-          :src="selectedCertificate.file"
+          :src="assetUrl(selectedCertificate.file)"
           :alt="selectedCertificate.title"
           class="max-h-[70vh] w-full rounded-md border border-default object-contain"
         >
@@ -93,7 +98,7 @@ function openCertificate(certificate: Certificate) {
 
       <template #footer>
         <UButton
-          :to="selectedCertificate.file"
+          :to="assetUrl(selectedCertificate.file)"
           target="_blank"
           color="neutral"
           variant="outline"
