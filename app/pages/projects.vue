@@ -59,7 +59,7 @@ const projects = [
 
 usePortfolioSeo({
   title: 'Proyectos',
-  description: 'Proyectos de desarrollo web de Christian Olaya: aplicaciones, APIs REST e interfaces modernas.',
+  description: 'Proyectos de desarrollo web de Christian Olaya: aplicaciones Full Stack, APIs REST, visualización de datos e interfaces modernas con Vue y Django.',
   path: '/projects'
 })
 </script>
