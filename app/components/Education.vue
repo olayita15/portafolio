@@ -1,8 +1,8 @@
 <script setup lang="ts">
 const education = [
-  { title: 'Ingeniería de Inteligencia Artificial y Análisis de Datos', institution: 'Universidad Nacional Abierta y a Distancia', period: 'Agosto 2026 — Actualidad', current: true },
+  { title: 'Ingeniería de Inteligencia Artificial y Análisis de Datos', institution: 'Universidad Nacional Abierta y a Distancia', period: 'Agosto 2026 — Actualidad', current: true, note: 'Formación orientada a inteligencia artificial, analítica de datos y soluciones basadas en datos.' },
   { title: 'Programación Full-stack', institution: 'Simplon | Educamás', period: 'Octubre 2022 — Marzo 2023' },
-  { title: 'Ingeniería Electrónica', institution: 'Universidad Distrital Francisco José de Caldas', period: 'Mayo 2016 — Mayo 2020', note: 'Estudios no finalizados · Base en programación y pensamiento lógico.' }
+  { title: 'Ingeniería Electrónica', institution: 'Universidad Distrital Francisco José de Caldas', period: 'Mayo 2016 — Mayo 2020', note: 'Estudios cursados hasta mayo de 2020 · Homologación en proceso.' }
 ]
 </script>
 

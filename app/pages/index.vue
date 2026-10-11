@@ -1,7 +1,7 @@
 <script setup lang="ts">
 usePortfolioSeo({
   title: 'Desarrollador Full Stack',
-  description: 'Portafolio profesional de Christian Olaya, desarrollador Full Stack especializado en Python, Django, Vue y aplicaciones web.',
+  description: 'Portafolio de Christian Olaya, desarrollador Full Stack con más de 4 años de experiencia en Python, Django, Vue, Nuxt, APIs REST y aplicaciones web.',
   path: '/'
 })
 </script>
