@@ -2,13 +2,20 @@
 const roles = [
   {
     title: 'Desarrollador Semi Senior', period: 'Enero 2026 — Actualidad',
-    items: ['Desarrollo y mantenimiento de aplicaciones con Django, Django REST Framework y Vue.', 'Implementación de APIs REST, WebSockets con Django Channels y procesos asíncronos con Celery.', 'Gestión de Redis, Docker y Docker Compose para desarrollo y despliegue.', 'Apoyo en coordinación técnica, geolocalización y visualización de datos.']
+    items: ['Desarrollo y mantenimiento de aplicaciones web con Django, Django REST Framework y Vue; construcción de APIs REST e integración frontend-backend.', 'Implementación de comunicación en tiempo real con Django Channels y procesos asíncronos y programados con Celery, Celery Beat y Redis.', 'Gestión de entornos de desarrollo y despliegue con Docker y Docker Compose.', 'Participación en proyectos de geolocalización, mapas de calor y visualización de datos, con apoyo en coordinación técnica y relacionamiento con clientes.']
   },
   {
     title: 'Desarrollador Junior', period: 'Marzo 2023 — Diciembre 2025',
-    items: ['Desarrollo, mantenimiento y soporte de aplicaciones construidas con Vue y Django.', 'Integración frontend-backend, atención de incidencias y entrega de nuevas funcionalidades.']
+    items: ['Desarrollo, mantenimiento y soporte de aplicaciones web construidas con Vue, Django y Django REST Framework.', 'Construcción de interfaces, integración frontend-backend, atención de incidencias e implementación de nuevas funcionalidades.']
   }
 ]
+
+const freelanceExperience = {
+  company: 'Fundación Social Crecer',
+  role: 'Desarrollador Full Stack Freelance',
+  period: 'Octubre 2022 — Febrero 2023',
+  items: ['Participación en el desarrollo de una aplicación para gestionar la entrega de mercados a beneficiarios de la fundación.', 'Construcción con Node.js, Express y Angular, con importación de archivos Excel y exportación de reportes para Bienestar Familiar.']
+}
 </script>
 
 <template>
@@ -34,5 +41,28 @@ const roles = [
         <ul class="mt-3 space-y-2 text-sm leading-6 text-muted"><li v-for="item in role.items" :key="item" class="flex gap-2"><UIcon name="i-lucide-check" class="mt-1 size-4 shrink-0 text-primary" /><span>{{ item }}</span></li></ul>
       </article>
     </div>
+
+    <USeparator class="my-6" />
+
+    <article v-scroll-reveal="160" class="scroll-reveal rounded-lg border border-default p-4">
+      <div class="flex gap-3">
+        <div class="flex size-9 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+          <UIcon name="i-lucide-briefcase-business" class="size-4" />
+        </div>
+        <div class="min-w-0">
+          <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+            <h3 class="font-semibold text-highlighted">{{ freelanceExperience.role }}</h3>
+            <span class="text-sm text-muted">{{ freelanceExperience.period }}</span>
+          </div>
+          <p class="mt-1 text-sm text-primary">{{ freelanceExperience.company }} · Bogotá, Colombia</p>
+          <ul class="mt-3 space-y-2 text-sm leading-6 text-muted">
+            <li v-for="item in freelanceExperience.items" :key="item" class="flex gap-2">
+              <UIcon name="i-lucide-check" class="mt-1 size-4 shrink-0 text-primary" />
+              <span>{{ item }}</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </article>
   </section>
 </template>

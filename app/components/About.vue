@@ -11,7 +11,7 @@
     </div>
 
     <p v-scroll-reveal="0" class="scroll-reveal mt-5 leading-7 text-muted">
-      Cuento con más de cuatro años de experiencia en desarrollo de software y he participado en proyectos variados para entidades estatales desde el grupo empresarial Inyuxi. Esta trayectoria me ha permitido fortalecer la comunicación con clientes, la gestión de solicitudes de soporte y la coordinación efectiva con equipos internos y externos para llevar los requerimientos a soluciones concretas.
+      Cuento con más de cuatro años de experiencia en el desarrollo y evolución de aplicaciones web. En el Grupo Empresarial INYUXI he participado en proyectos diversos para entidades estatales, combinando construcción de producto, mantenimiento evolutivo y atención de incidencias. Esta trayectoria fortaleció mi capacidad para dialogar con clientes, gestionar solicitudes de soporte y coordinar el trabajo entre equipos internos y externos.
     </p>
 
     <div v-scroll-reveal="80" class="scroll-reveal mt-5 flex flex-wrap gap-2">

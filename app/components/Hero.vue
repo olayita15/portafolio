@@ -2,7 +2,7 @@
   <UPageHero
     title="Christian Olaya"
     headline="Desarrollador de software"
-    description="Desarrollador Full Stack con experiencia en Python, Django REST Framework, JavaScript y Vue/Nuxt. Enfocado en construir aplicaciones web, APIs REST y dashboards, integrando soluciones robustas de frontend y backend."
+    description="Desarrollador Full Stack con más de cuatro años de experiencia en Python, Django, Django REST Framework, Vue y Nuxt. Construyo aplicaciones web, APIs REST, procesos asíncronos y soluciones de visualización de datos con un enfoque práctico, mantenible y orientado al usuario."
     :ui="{
       container: 'py-8 sm:py-10 lg:pb-0 lg:pt-6 gap-8',
       description: 'mt-8',

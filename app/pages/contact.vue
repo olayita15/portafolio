@@ -41,7 +41,7 @@ watch(selectedTemplate, value => {
 
 usePortfolioSeo({
   title: 'Contacto',
-  description: 'Contacta a Christian Olaya para colaborar en proyectos de desarrollo web, APIs y aplicaciones Full Stack.',
+  description: 'Contacta a Christian Olaya, desarrollador Full Stack con experiencia en Python, Django, Vue, Nuxt, APIs REST, soporte y despliegue con Docker.',
   path: '/contact'
 })
 
