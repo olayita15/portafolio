@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const skillGroups = [
-  { label: 'Backend y APIs', icon: 'i-lucide-server', skills: ['Python', 'Django', 'Django REST Framework', 'Django Channels', 'Node.js', 'Express', 'APIs REST', 'WebSockets', 'Celery', 'Celery Beat', 'Redis', 'SQL', 'MongoDB'] },
-  { label: 'Frontend', icon: 'i-lucide-monitor-smartphone', skills: ['Vue', 'Vue 3', 'Nuxt', 'Nuxt UI', 'Angular', 'JavaScript', 'Vuex', 'Vue Router', 'Vuetify', 'PrimeVue', 'Axios', 'HTML5', 'CSS3', 'SCSS', 'Bootstrap', 'Tailwind CSS', 'DaisyUI'] },
+  { label: 'Backend y APIs', icon: 'i-lucide-server', skills: ['Python', 'Django', 'Django REST Framework', 'Django Channels', 'Node.js', 'Express', 'APIs REST', 'Celery', 'Celery Beat', 'Redis', 'SQL', 'MongoDB'] },
+  { label: 'Frontend', icon: 'i-lucide-monitor-smartphone', skills: ['Vue', 'Vue 3', 'Nuxt', 'Nuxt UI', 'Angular', 'JavaScript', 'Vuex', 'Vue Router', 'Vuetify', 'PrimeVue', 'Axios', 'WebSockets', 'HTML5', 'CSS3', 'SCSS', 'Bootstrap', 'Tailwind CSS', 'DaisyUI'] },
   { label: 'DevOps y calidad', icon: 'i-lucide-box', skills: ['Docker', 'Docker Compose', 'Git', 'GitLab CI/CD', 'Linux', 'Bash', 'SonarQube'] },
   { label: 'Trabajo técnico', icon: 'i-lucide-map', skills: ['Integración de servicios', 'Procesamiento de datos', 'Geolocalización', 'Mapas de calor', 'Visualización de datos', 'SCRUM', 'Soporte técnico', 'Coordinación técnica'] }
 ]
