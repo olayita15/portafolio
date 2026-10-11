@@ -6,7 +6,8 @@ const certificates = [
   { title: 'Python y ChatGPT', issuer: 'Udemy', year: '2023', file: '/certificates/python-chatgpt-mini-course.pdf', preview: '/certificates/previews/python-chatgpt-mini-course.jpg', format: 'pdf', type: 'Curso', group: 'training' },
   { title: 'Clean Code y SOLID', issuer: 'Udemy', year: '2023', file: '/certificates/clean-code-solid.pdf', preview: '/certificates/previews/clean-code-solid.jpg', format: 'pdf', type: 'Curso', group: 'training' },
   { title: 'Fundamentos de UX', issuer: 'Udemy', year: '2023', file: '/certificates/ux-foundations.pdf', preview: '/certificates/previews/ux-foundations.jpg', format: 'pdf', type: 'Curso', group: 'training' },
-  { title: 'Metodología SCRUM', issuer: 'Formación complementaria', year: '2023', file: '/certificates/scrum-methodology.pdf', preview: '/certificates/previews/scrum-methodology.jpg', format: 'pdf', type: 'Curso', group: 'training' }
+  { title: 'Metodología SCRUM', issuer: 'Formación complementaria', year: '2023', file: '/certificates/scrum-methodology.pdf', preview: '/certificates/previews/scrum-methodology.jpg', format: 'pdf', type: 'Curso', group: 'training' },
+  { title: 'Economía y Finanzas de Empresas', issuer: 'Universidad de Palermo · Coursera', year: '2026', file: '/certificates/business-economics-finance.pdf', preview: '/certificates/previews/business-economics-finance.jpg', format: 'pdf', type: 'Curso', group: 'training' }
 ]
 
 const trainingCertificates = computed(() => certificates.filter(certificate => certificate.group === 'training'))
